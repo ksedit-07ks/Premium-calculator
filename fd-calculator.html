@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FD कैलकुलेटर हिंदी में | मैच्योरिटी पर कितनी रकम मिलेगी</title>
+<meta name="description" content="FD की रकम, ब्याज दर और अवधि डालकर मैच्योरिटी की रकम और कुल ब्याज निकालें। तिमाही, मासिक, छमाही और सालाना ब्याज जुड़ने का विकल्प।">
+<meta property="og:title" content="FD कैलकुलेटर हिंदी में | मैच्योरिटी पर कितनी रकम मिलेगी">
+<meta property="og:description" content="FD की रकम, ब्याज दर और अवधि डालकर मैच्योरिटी की रकम और कुल ब्याज निकालें। तिमाही, मासिक, छमाही और सालाना ब्याज जुड़ने का विकल्प।">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hi_IN">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "FD कैलकुलेटर: मैच्योरिटी पर कितनी रकम मिलेगी", "description": "FD की रकम, ब्याज दर और अवधि डालकर मैच्योरिटी की रकम और कुल ब्याज निकालें। तिमाही, मासिक, छमाही और सालाना ब्याज जुड़ने का विकल्प।", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "hi", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0c2340;--navy2:#17365e;--gold:#b08a3e;--gold2:#d9b96a;--bg:#f6f7f9;--card:#fff;--line:#dfe3e9;--ink:#14202e;--muted:#5d6a79;--bad:#a8332a}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Mukta","Noto Sans Devanagari","Nirmala UI",sans-serif;font-size:18px;line-height:1.55}
+header{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold);padding:26px 16px 22px;text-align:center}
+header h1{font-family:"Noto Serif Devanagari",Georgia,serif;font-weight:700;font-size:1.7rem;line-height:1.25;margin:0 0 4px;letter-spacing:.2px}
+header p{margin:0;color:#b9c6d6;font-size:.98rem}
+.wrap{max-width:620px;margin:0 auto;padding:18px 14px 44px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.tabs a{display:flex;flex-direction:column;align-items:center;gap:4px;font:inherit;font-weight:600;font-size:.95rem;padding:12px 4px 10px;border:1px solid var(--line);background:var(--card);color:var(--navy);border-radius:10px;cursor:pointer;box-shadow:0 1px 2px rgba(12,35,64,.06)}
+.tabs svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tabs a[aria-current="page"]{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:inset 0 -3px 0 var(--gold)}
+.tabs a[aria-current="page"] svg{stroke:var(--gold2)}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:4px 4px 12px 12px;padding:18px;box-shadow:0 2px 10px rgba(12,35,64,.07)}
+.panel[hidden]{display:none}
+h2{font-family:"Noto Serif Devanagari",Georgia,serif;font-size:1.25rem;color:var(--navy);margin:0 0 12px}
+label{display:block;font-weight:600;margin:14px 0 4px;color:var(--navy)}
+h2+label{margin-top:0}
+input,select{width:100%;font:inherit;padding:11px 12px;border:1px solid #b9c3cf;border-radius:8px;background:#fff;color:var(--ink)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sub{font-weight:600;color:var(--navy);margin:18px 0 6px;padding-top:12px;border-top:1px solid var(--line)}
+.result{margin-top:18px;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:14px}
+.big{font-family:"Noto Serif Devanagari",Georgia,serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1.2}
+.row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row span:first-child{color:var(--muted)}
+.row span:last-child{font-weight:600;text-align:right}
+.note{color:var(--muted);font-size:.88rem;margin:12px 0 0}
+.err{color:var(--bad);font-weight:600;margin:0}
+details{margin-top:14px;border:1px solid var(--line);border-radius:8px;background:#fff}
+summary{cursor:pointer;font-weight:600;color:var(--navy);padding:11px 12px}
+.scroll{max-height:340px;overflow:auto;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:7px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{position:sticky;top:0;background:var(--navy);color:#fff;font-weight:600}
+th:first-child,td:first-child{text-align:center}
+textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid #b9c3cf;border-radius:8px;background:#fff;color:var(--ink);resize:vertical;min-height:110px}
+textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:600;padding:12px 18px;border-radius:10px;border:1px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;box-shadow:inset 0 -3px 0 var(--gold)}
+.btn.alt{background:#fff;color:var(--navy);box-shadow:none}
+.btn svg{width:20px;height:20px;stroke:var(--gold2);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.btn.alt svg{stroke:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.stars{display:flex;gap:6px}
+.stars button{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer;line-height:0}
+.stars svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linejoin:round}
+.stars button.on svg{fill:var(--gold);stroke:var(--gold)}
+.stars button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+footer{margin-top:22px;color:var(--muted);font-size:.85rem;text-align:center}
+
+@media (hover:hover){.tabs a:hover{border-color:var(--gold)}.btn:hover{filter:brightness(1.12)}}
+@media (min-width:900px){
+  body{font-size:19px}
+  header{padding:38px 16px 32px}
+  header h1{font-size:2.3rem}
+  header p{font-size:1.1rem}
+  .wrap{max-width:1060px;padding:34px 24px 60px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:30px;align-items:start}
+  .tabs{grid-template-columns:1fr;gap:8px;margin:0;position:sticky;top:16px}
+  .tabs a{flex-direction:row;justify-content:flex-start;gap:14px;padding:13px 16px;font-size:1.02rem}
+  .tabs svg{width:24px;height:24px;flex:none}
+  .card{padding:30px 34px}
+  h2{font-size:1.45rem;margin-bottom:16px}
+  .big{font-size:2.5rem}
+  .scroll{max-height:420px}
+  table{font-size:.95rem}
+  footer{grid-column:1/-1;margin-top:8px}
+}
+
+.tabs a{text-decoration:none;text-align:center}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header .brand{display:block;font-family:"Noto Serif Devanagari",Georgia,serif;font-weight:700;font-size:1.7rem;line-height:1.25;color:#fff;text-decoration:none;margin:0 0 4px}
+h1.pt{font-family:"Noto Serif Devanagari",Georgia,serif;font-size:1.25rem;line-height:1.35;color:var(--navy);margin:0 0 12px}
+h1.pt+label{margin-top:0}
+.seo{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.seo h2{font-size:1.15rem;margin:0 0 8px}
+.seo h3{font-size:1.02rem;color:var(--navy);margin:14px 0 4px}
+.seo p{margin:0 0 8px}
+footer a{color:var(--navy);font-weight:600}
+footer p{margin:6px 0}
+.dr{display:grid;grid-template-columns:5.2em 1fr 1fr;gap:8px;align-items:center;margin-bottom:8px}
+.dr span{font-weight:600;color:var(--navy)}
+.dr.h span{font-weight:400;color:var(--muted);font-size:.88rem}
+.dr input{padding:9px 6px;min-width:0}
+.cl{display:grid;grid-template-columns:1fr;gap:10px;margin:16px 0}
+.cl a{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--navy);text-decoration:none;box-shadow:0 1px 2px rgba(12,35,64,.06)}
+.cl svg{width:30px;height:30px;flex:none;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cl strong{display:block}
+.cl small{color:var(--muted);font-size:.88rem;line-height:1.35;display:block}
+.dr.m{grid-template-columns:4.6em 1fr 1fr 2.6em}
+.dr.h.m span:last-child{text-align:center}
+.dr input[type=checkbox]{width:22px;height:22px;padding:0;justify-self:center;accent-color:var(--navy)}
+.dr.off span{color:var(--muted)}
+.dr.off input[type=time]{opacity:.5}
+#o-days{padding:10px}
+.dy{border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:8px}
+.dy:last-child{border-bottom:0;margin-bottom:0}
+.dy .dr{margin-bottom:6px}
+.ot{display:grid;grid-template-columns:1fr 5.4em 5.4em;gap:8px;align-items:center}
+.ot span{font-size:.88rem;color:var(--muted)}
+.ot input{padding:7px 6px;min-width:0}
+.lang{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.lang button{font:inherit;font-size:.92rem;font-weight:600;padding:5px 16px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:#fff;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--navy)}
+@media (min-width:900px){
+  header .brand{font-size:2.3rem}
+  h1.pt{font-size:1.45rem;margin-bottom:16px}
+  .tabs{grid-column:1;grid-row:1 / span 2}
+  .panel,.seo{grid-column:2}
+  .wrap.home{display:block;max-width:900px}
+  .cl{grid-template-columns:repeat(3,1fr)}
+  .cl a{flex-direction:column;align-items:flex-start;gap:8px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-emi" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></symbol>
+  <symbol id="i-gst" viewBox="0 0 24 24"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.2"/><circle cx="17" cy="17" r="2.2"/></symbol>
+  <symbol id="i-bmi" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 12a4 4 0 018 0M12 12l2-2.5"/></symbol>
+  <symbol id="i-age" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M12 3c1 3 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z"/></symbol>
+  <symbol id="i-time" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-sip" viewBox="0 0 24 24"><path d="M3 21h18M4 17l5-5 4 4 7-8M15 8h5v5"/></symbol>
+  <symbol id="i-fd" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3M12 14.5v3"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/><path d="M8 9h8M8 12h5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.3 19z"/><path d="M9 9.5c.5 2.5 2.5 4.5 5 5l1.2-1.2-2-1-.8.8c-.9-.4-1.6-1.100-2-2l.8-.8-1-2z"/></symbol>
+  <symbol id="i-off" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></symbol>
+</svg>
+
+<header>
+  <a class="brand" href="index.html">प्रीमियम कैलकुलेटर</a>
+  <p>EMI · SIP · FD · GST · BMI · उम्र · कैलोरी · समय · ऑफ़िस टाइम</p>
+</header>
+
+<main class="wrap">
+  <nav class="tabs" aria-label="कैलकुलेटर चुनें"><a href="emi-calculator.html"><svg><use href="#i-emi"/></svg>EMI</a><a href="sip-calculator.html"><svg><use href="#i-sip"/></svg>SIP</a><a href="fd-calculator.html" aria-current="page"><svg><use href="#i-fd"/></svg>FD</a><a href="gst-calculator.html"><svg><use href="#i-gst"/></svg>GST</a><a href="bmi-calculator.html"><svg><use href="#i-bmi"/></svg>BMI</a><a href="age-calculator.html"><svg><use href="#i-age"/></svg>उम्र</a><a href="calorie-calculator.html"><svg><use href="#i-cal"/></svg>कैलोरी</a><a href="time-calculator.html"><svg><use href="#i-time"/></svg>समय</a><a href="office-time-calculator.html"><svg><use href="#i-off"/></svg>ऑफ़िस</a></nav>
+
+    <section class="card panel" id="p-fd">
+    <h1 class="pt">FD कैलकुलेटर: मैच्योरिटी पर कितनी रकम मिलेगी</h1>
+    <label for="f-p">जमा रकम (₹)</label>
+    <input id="f-p" type="number" inputmode="decimal" value="100000" min="0">
+    <label for="f-r">सालाना ब्याज दर (%)</label>
+    <input id="f-r" type="number" inputmode="decimal" value="7" min="0" step="any">
+    <label for="f-y">अवधि</label>
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:8px">
+      <input id="f-y" type="number" inputmode="decimal" value="5" min="0" step="any">
+      <select id="f-u" aria-label="अवधि की इकाई"><option value="y" selected>साल</option><option value="m">महीने</option></select>
+    </div>
+    <label for="f-c">ब्याज कितनी बार जुड़ता है</label>
+    <select id="f-c"><option value="4" selected>हर तिमाही (ज़्यादातर बैंक)</option><option value="12">हर महीने</option><option value="2">हर छह महीने</option><option value="1">हर साल</option></select>
+    <div class="result" id="f-out" aria-live="polite"></div>
+    <p class="note">बैंक की असली दर और TDS (टैक्स) अलग हो सकते हैं। जमा करने से पहले बैंक से पूछ लें।</p>
+  </section>
+  <article class="seo">
+    <h2>FD कैलकुलेटर के बारे में</h2>
+    <p>फिक्स्ड डिपॉज़िट (FD) में ब्याज तय समय पर मूलधन में जुड़ता जाता है, इसलिए ब्याज पर भी ब्याज मिलता है। ज़्यादातर बैंक तिमाही पर ब्याज जोड़ते हैं, पर यह बैंक पर निर्भर है, इसलिए अपने बैंक का तरीका चुनें।</p>
+    <p><strong>फ़ॉर्मूला:</strong> मैच्योरिटी रकम = P × (1 + r ÷ (100 × f))^(f × t), जहाँ f साल में ब्याज जुड़ने की बार और t साल में अवधि है।</p>
+    <h2 style="margin-top:16px">अक्सर पूछे जाने वाले सवाल</h2>
+    <h3>असल सालाना ब्याज क्या है?</h3><p>बार-बार जुड़ने की वजह से असल सालाना कमाई बताई गई दर से थोड़ी ज़्यादा होती है। यही आँकड़ा नतीजे में दिखता है।</p><h3>क्या FD के ब्याज पर टैक्स लगता है?</h3><p>आम तौर पर हाँ, ब्याज आपकी आय में जुड़ता है और TDS कट सकता है। नियम बदलते रहते हैं, इसलिए बैंक या टैक्स सलाहकार से पूछें।</p><h3>क्या अवधि के हिसाब से दर बदलती है?</h3><p>अक्सर हाँ, बैंक अलग अवधि पर अलग दरें देते हैं।</p>
+  </article>
+  <footer>
+    <p><a href="index.html">होम</a> · <a href="about.html">हमारे बारे में</a> · <a href="privacy.html">गोपनीयता नीति</a> · <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0ep0ILRAOSykEzA9ERxOfKDvb8XTf6TXFK9OPbgxBx4eFAg/viewform" target="_blank" rel="noopener noreferrer">राय दें</a></p>
+    <p>सिर्फ़ जानकारी के लिए। बैंक, सरकारी दस्तावेज़ या कंपनी के नियमों में उन्हीं की गिनती अंतिम मानी जाएगी।</p>
+  </footer>
+</main>
+<script>window.START='fd';</script>
+<script>
+(function(){
+  var f0=new Intl.NumberFormat('en-IN',{maximumFractionDigits:0}),f2=new Intl.NumberFormat('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+  var rs=function(n){return '₹'+f0.format(Math.round(n));},rs2=function(n){return '₹'+f2.format(n);};
+  var $=function(i){return document.getElementById(i);},num=function(i){return parseFloat($(i).value);};
+  var row=function(a,b){return '<div class="row"><span>'+a+'</span><span>'+b+'</span></div>';};
+  var bad=function(m){return '<p class="err">'+m+'</p>';};
+  var big=function(a,b){return '<div class="big">'+a+'</div><div>'+b+'</div>';};
+
+  function emi(){
+    var P=num('emi-p'),r=num('emi-r'),y=num('emi-y'),o=$('emi-out'),t=$('emi-tbl');
+    var mo=$('emi-u').value==='m'?y:y*12;if(!(P>0)||!(mo>=1)||!(r>=0)||mo>600){o.innerHTML=bad('सारे खाने सही भरें (अवधि कम से कम 1 महीना और ज़्यादा से ज़्यादा 50 साल)।');t.innerHTML='';return;}
+    var n=Math.round(mo),m=r/1200,e=m===0?P/n:P*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1),tot=e*n;
+    o.innerHTML=big(rs(e),'हर महीने की EMI')+row('कुल ब्याज',rs(tot-P))+row('कुल भुगतान',rs(tot))+row('कुल किस्तें',n+' महीने');
+    var bal=P,h='<table><thead><tr><th>माह</th><th>ब्याज</th><th>मूलधन</th><th>बाकी रकम</th></tr></thead><tbody>';
+    for(var k=1;k<=n;k++){var it=bal*m,pr=e-it;bal=k===n?0:Math.max(bal-pr,0);h+='<tr><td>'+k+'</td><td>'+f0.format(it)+'</td><td>'+f0.format(pr)+'</td><td>'+f0.format(bal)+'</td></tr>';}
+    t.innerHTML=h+'</tbody></table>';
+  }
+  function gst(){
+    var a=num('gst-a'),r=num('gst-r'),md=$('gst-m').value,o=$('gst-out');
+    if(isNaN(a)||a<0){o.innerHTML=bad('रकम सही भरें।');return;}
+    var b,x,t;if(md==='add'){b=a;x=a*r/100;t=a+x;}else{t=a;b=a/(1+r/100);x=t-b;}
+    o.innerHTML=big(rs2(t),'कुल रकम')+row('GST के बिना रकम',rs2(b))+row('GST ('+r+'%)',rs2(x))+row('CGST + SGST',rs2(x/2)+' + '+rs2(x/2));
+  }
+  function bmi(){
+    var h=num('bmi-h'),w=num('bmi-w'),o=$('bmi-out');
+    if(!(h>50&&h<260)||!(w>0)){o.innerHTML=bad('कद और वज़न सही भरें।');return;}
+    var q=h/100,v=w/(q*q),c=v<18.5?'कम वज़न':v<25?'सामान्य':v<30?'ज़्यादा वज़न':'मोटापा';
+    o.innerHTML=big(v.toFixed(1),c)+row('सामान्य वज़न की सीमा',(18.5*q*q).toFixed(1)+' से '+(24.9*q*q).toFixed(1)+' किलो');
+  }
+  function age(){
+    var v=$('age-d').value,o=$('age-out');if(!v){o.innerHTML='<p style="margin:0">जन्म तारीख चुनें।</p>';return;}
+    var b=new Date(v+'T00:00:00'),t=new Date();t=new Date(t.getFullYear(),t.getMonth(),t.getDate());
+    if(b>t){o.innerHTML=bad('जन्म तारीख आज से पहले की होनी चाहिए।');return;}
+    var y=t.getFullYear()-b.getFullYear(),m=t.getMonth()-b.getMonth(),d=t.getDate()-b.getDate();
+    if(d<0){m--;d+=new Date(t.getFullYear(),t.getMonth(),0).getDate();}if(m<0){y--;m+=12;}
+    var nx=new Date(t.getFullYear(),b.getMonth(),b.getDate());if(nx<t)nx=new Date(t.getFullYear()+1,b.getMonth(),b.getDate());
+    var l=Math.round((nx-t)/864e5);
+    o.innerHTML=big(y+' साल',m+' महीने, '+d+' दिन')+row('कुल दिन',f0.format(Math.floor((t-b)/864e5)))+row('अगला जन्मदिन',l===0?'आज है':l+' दिन बाद');
+  }
+  function cal(){
+    var a=num('c-a'),h=num('c-h'),w=num('c-w'),m=$('c-s').value==='m',act=parseFloat($('c-act').value),g=parseFloat($('c-g').value),o=$('c-out');
+    if(!(a>0&&h>100&&h<250&&w>20&&w<300)){o.innerHTML=bad('उम्र, कद और वज़न सही भरें।');return;}
+    if(a<18){o.innerHTML=bad('यह कैलकुलेटर 18 साल या ज़्यादा उम्र के लिए है।');return;}
+    var bmr=10*w+6.25*h-5*a+(m?5:-161),tdee=bmr*act,tg=tdee+g,fl=m?1500:1200,fn='';
+    if(tg<fl){tg=fl;fn='<p class="note">सुरक्षा के लिए लक्ष्य '+f0.format(fl)+' कैलोरी से नीचे नहीं दिखाया गया।</p>';}
+    var lbl=g<0?'रोज़ की कैलोरी (वज़न घटाने के लिए)':g>0?'रोज़ की कैलोरी (मसल बढ़ाने के लिए)':'रोज़ की कैलोरी (वज़न बनाए रखने के लिए)';
+    o.innerHTML=big(f0.format(Math.round(tg))+' kcal',lbl)+row('BMR (आराम में ज़रूरत)',f0.format(Math.round(bmr))+' kcal')+row('रोज़ का खर्च (TDEE)',f0.format(Math.round(tdee))+' kcal')+row('प्रोटीन का अंदाज़ा',Math.round(1.6*w)+' ग्राम रोज़')+fn;
+  }
+  var pad=function(n){return n<10?'0'+n:''+n;};
+  function dur(t){var s=t<0?'−':'';t=Math.abs(Math.round(t));return {s:s,d:Math.floor(t/86400),h:Math.floor(t%86400/3600),m:Math.floor(t%3600/60),sc:t%60,tot:t};}
+  function time(){
+    var s=$('tm-s').value,e=$('tm-e').value,o=$('tm-out');
+    if(!s||!e){o.innerHTML='<p style="margin:0">दोनों समय चुनें।</p>';}
+    else{var a=s.split(':'),b=e.split(':'),x=(+b[0]*60+ +b[1])-(+a[0]*60+ +a[1]),nx=x<=0;if(nx)x+=1440;
+      o.innerHTML=big(Math.floor(x/60)+' घंटे '+x%60+' मिनट','दोनों समय का अंतर')+(nx?'<p class="note">खत्म का समय अगले दिन का माना गया है।</p>':'');}
+    var A=num('a-h')*3600+num('a-m')*60+num('a-s'),B=num('b-h')*3600+num('b-m')*60+num('b-s'),o2=$('tm2-out');
+    if(isNaN(A)||isNaN(B)){o2.innerHTML=bad('सारे खाने भरें।');return;}
+    var r=dur(A+parseInt($('op').value,10)*B);
+    o2.innerHTML=big(r.s+pad(Math.floor(r.tot/3600))+':'+pad(r.m)+':'+pad(r.sc),'घंटे : मिनट : सेकंड')+row('कुल घंटे',r.s+(r.tot/3600).toFixed(2))+(r.d>0?row('दिनों में',r.s+r.d+' दिन '+r.h+' घंटे '+r.m+' मिनट'):'');
+  }
+  function bindUnit(u,y){if(!$(u))return;var last='y';$(u).addEventListener('change',function(){var v=parseFloat($(y).value),k=this.value;if(!isNaN(v)&&k!==last){$(y).value=k==='m'?Math.round(v*12):+(v/12).toFixed(2);}last=k;});}
+  bindUnit('s-u','s-y');bindUnit('f-u','f-y');
+  function sip(){
+    var P=num('s-p'),r=num('s-r'),y=num('s-y'),mo=$('s-u').value==='m'?y:y*12,o=$('s-out');
+    if(!(P>0)||!(r>=0)||!(mo>=1)||mo>600){o.innerHTML=bad('सारे खाने सही भरें (अवधि कम से कम 1 महीना और ज़्यादा से ज़्यादा 50 साल)।');return;}
+    var n=Math.round(mo),i=r/1200,fv=i===0?P*n:P*((Math.pow(1+i,n)-1)/i)*(1+i),inv=P*n;
+    o.innerHTML=big(rs(fv),'अनुमानित कुल रकम')+row('आपका लगाया पैसा',rs(inv))+row('अनुमानित फ़ायदा',rs(fv-inv))+row('कुल किस्तें',n+' महीने');
+  }
+  function fd(){
+    var P=num('f-p'),r=num('f-r'),y=num('f-y'),mo=$('f-u').value==='m'?y:y*12,f=parseInt($('f-c').value,10),o=$('f-out');
+    if(!(P>0)||!(r>=0)||!(mo>=1)||mo>600){o.innerHTML=bad('सारे खाने सही भरें (अवधि कम से कम 1 महीना और ज़्यादा से ज़्यादा 50 साल)।');return;}
+    var t=mo/12,A=P*Math.pow(1+r/(100*f),f*t),eff=(Math.pow(1+r/(100*f),f)-1)*100;
+    o.innerHTML=big(rs(A),'मैच्योरिटी पर मिलने वाली रकम')+row('जमा रकम',rs(P))+row('कुल ब्याज',rs(A-P))+row('असल सालाना ब्याज',eff.toFixed(2)+'%');
+  }
+  var SHORT=['रवि','सोम','मंगल','बुध','गुरु','शुक्र','शनि'],SHORT_EN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var MON=['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'],MON_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var tt=function(s){var k=s.normalize?s.normalize('NFC'):s;return (window.LANG==='en'&&window.EN&&window.EN[k]!==undefined)?window.EN[k]:s;};
+  var isEn=function(){return window.LANG==='en';};
+  var lastReport='',OY=0,OM=0,ON=0,pd={s:'',e:''},noteState='init',NOTE0='',OID=['o-b','o-f','o-r','o-m','o-ds','o-de','o-mo','o-wo'];
+  var fm=function(m){var h=Math.floor(m/60),x=m%60;return isEn()?h+' h '+x+' min':h+' घंटे '+x+' मिनट';};
+  function setNote(st){
+    var el=$('o-cm');if(!el)return;noteState=st;
+    var en=window.EN&&window.EN[NOTE0.normalize?NOTE0.normalize('NFC'):NOTE0];
+    el.textContent=st==='init'?((isEn()&&en)?en:NOTE0):tt(st==='empty'?'पहले महीना चुनें और समय भरें।':st==='ok'?'कॉपी हो गया।':'कॉपी नहीं हो सका। नतीजा चुनकर खुद कॉपी करें।');
+  }
+  function relabel(){
+    var en=isEn();
+    for(var d=1;d<=ON;d++){
+      var sp=$('o-d'+d);if(!sp)continue;
+      sp.textContent=d+' '+(en?SHORT_EN:SHORT)[new Date(OY,OM-1,d).getDay()];
+      $('o-s'+d).setAttribute('aria-label',en?'Day '+d+' in time':d+' तारीख आने का समय');
+      $('o-e'+d).setAttribute('aria-label',en?'Day '+d+' out time':d+' तारीख जाने का समय');
+      $('o-x'+d).setAttribute('aria-label',en?'Day '+d+' off':d+' तारीख छुट्टी');
+      $('o-oh'+d).setAttribute('aria-label',en?'Day '+d+' overtime hours':d+' तारीख ओवरटाइम घंटे');
+      $('o-om'+d).setAttribute('aria-label',en?'Day '+d+' overtime minutes':d+' तारीख ओवरटाइम मिनट');
+    }
+  }
+  function obuild(){
+    var mv=$('o-mo').value,p=/^(\d{4})-(\d{2})$/.exec(mv||'');
+    if(!p||+p[2]<1||+p[2]>12){ON=0;$('o-days').innerHTML='';return;}
+    OY=+p[1];OM=+p[2];ON=new Date(OY,OM,0).getDate();
+    var ds=$('o-ds').value,de=$('o-de').value,wo=$('o-wo').value;
+    var h='<div class="dr m h"><span>दिन</span><span>आने का</span><span>जाने का</span><span>छुट्टी</span></div>';
+    for(var d=1;d<=ON;d++){
+      var wd=new Date(OY,OM-1,d).getDay(),off=wo==='sun'?wd===0:wo==='satsun'?(wd===0||wd===6):false;
+      h+='<div class="dy"><div class="dr m'+(off?' off':'')+'"><span id="o-d'+d+'"></span><input id="o-s'+d+'" type="time" value="'+ds+'"><input id="o-e'+d+'" type="time" value="'+de+'"><input id="o-x'+d+'" type="checkbox"'+(off?' checked':'')+'></div><div class="ot"><span>अलग से ओवरटाइम</span><input id="o-oh'+d+'" type="number" min="0" inputmode="numeric" placeholder="घंटे"><input id="o-om'+d+'" type="number" min="0" inputmode="numeric" placeholder="मिनट"></div></div>';
+    }
+    $('o-days').innerHTML=h;pd={s:ds,e:de};
+    relabel();if(window.reapply)window.reapply();
+  }
+  function oapply(){
+    var s=$('o-ds').value,e=$('o-de').value;
+    for(var d=1;d<=ON;d++){var a=$('o-s'+d),c=$('o-e'+d);if(a.value===pd.s)a.value=s;if(c.value===pd.e)c.value=e;}
+    pd={s:s,e:e};
+  }
+  function office(){
+    var en=isEn(),b=num('o-b'),fx=num('o-f'),r=num('o-r'),mu=num('o-m'),o=$('o-out');
+    if(!ON){o.innerHTML='<p style="margin:0">'+tt('ऊपर महीना चुनें (जैसे 2026-10)।')+'</p>';lastReport='';return;}
+    if(isNaN(b)||b<0||isNaN(fx)||fx<0){o.innerHTML=bad(tt('ब्रेक और तय घंटे सही भरें।'));lastReport='';return;}
+    var reg=0,ot=0,days=0,half=0,xoT=0,lines=[];
+    for(var d=1;d<=ON;d++){
+      var cb=$('o-x'+d),lv=cb.checked;cb.parentNode.classList.toggle('off',lv);
+      var s=$('o-s'+d).value,e=$('o-e'+d).value;
+      var xo=Math.round((parseFloat($('o-oh'+d).value)||0)*60+(parseFloat($('o-om'+d).value)||0));if(xo<0)xo=0;
+      var base=0,bov=0,has=false;
+      if(!lv){
+        if(s&&e){
+          var a=s.split(':'),c=e.split(':'),m=(+c[0]*60+ +c[1])-(+a[0]*60+ +a[1]);if(m<=0)m+=1440;
+          m=Math.max(m-b,0);bov=Math.max(m-fx*60,0);reg+=m-bov;ot+=bov;base=m;has=true;days++;
+        }else if(s||e){half++;}
+      }
+      if(xo>0){ot+=xo;xoT+=xo;}
+      if(has||xo>0){
+        var nm=d+' '+(en?SHORT_EN:SHORT)[new Date(OY,OM-1,d).getDay()];
+        lines.push(nm+': '+(has?fm(base)+(bov?(en?' (overtime ':' (ओवरटाइम ')+fm(bov)+')':''):(lv?tt('छुट्टी'):tt('समय नहीं भरा')))+(xo?(en?' + extra overtime ':' + अलग से ओवरटाइम ')+fm(xo):''));
+      }
+    }
+    if(!days&&!ot){o.innerHTML='<p style="margin:0">'+tt('कोई काम का दिन नहीं मिला। छुट्टी के टिक हटाएँ या समय भरें।')+'</p>';lastReport='';return;}
+    var tot=reg+ot,pay=null,title=(en?MON_EN:MON)[OM-1]+' '+OY;
+    var html=big(fm(tot),en?'Total work hours for '+title:title+' के कुल काम के घंटे')+row(tt('सामान्य घंटे'),fm(reg))+row(tt('ओवरटाइम'),fm(ot))+(xoT?row(tt('इसमें अलग से जोड़ा गया'),fm(xoT)):'')+row(tt('काम के दिन'),days)+row(tt('छुट्टी या खाली दिन'),ON-days)+(days?row(tt('काम वाले दिन का औसत'),fm(Math.round((reg+ot)/days))):'');
+    if(r>0){pay=(reg/60)*r+(ot/60)*r*(isNaN(mu)?1:mu);html+=row(tt('अनुमानित कमाई'),rs(pay));}
+    if(half)html+='<p class="note">'+(en?half+' day(s) have only an in or out time and were not counted.':half+' दिन में सिर्फ़ आने या जाने का समय भरा है, उन्हें गिना नहीं गया।')+'</p>';
+    o.innerHTML=html+'<details><summary>'+tt('दिन-दर-दिन घंटे देखें')+'</summary><p class="note" style="padding:0 12px 10px">'+lines.join('<br>')+'</p></details>';
+    lastReport=(en?'Office Time Report (':'ऑफ़िस टाइम रिपोर्ट (')+title+')\n'+lines.join('\n')+'\n'+(en?'Total: ':'कुल: ')+fm(tot)+(en?' (regular ':' (सामान्य ')+fm(reg)+(en?', overtime ':', ओवरटाइम ')+fm(ot)+')\n'+tt('काम के दिन')+': '+days+(xoT?'\n'+tt('अलग से जोड़ा ओवरटाइम')+': '+fm(xoT):'')+(pay!==null?'\n'+tt('अनुमानित कमाई')+': '+rs(pay):'');
+  }
+  function copyTxt(t,cb){
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){cb(true);},function(){cb(false);});}
+    else{try{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();var ok=document.execCommand('copy');document.body.removeChild(a);cb(ok);}catch(x){cb(false);}}
+  }
+  if($('o-days')){
+    NOTE0=$('o-cm').textContent;
+    if(!$('o-mo').value){var nw=new Date();$('o-mo').value=nw.getFullYear()+'-'+(nw.getMonth()<9?'0':'')+(nw.getMonth()+1);}
+    obuild();
+    ['input','change'].forEach(function(t){
+      $('o-days').addEventListener(t,office);
+      $('o-mo').addEventListener(t,obuild);$('o-wo').addEventListener(t,obuild);
+      $('o-ds').addEventListener(t,oapply);$('o-de').addEventListener(t,oapply);
+    });
+    $('o-fill').addEventListener('click',function(){obuild();office();});
+    $('o-copy').addEventListener('click',function(){
+      if(!lastReport){setNote('empty');return;}
+      copyTxt(lastReport,function(ok){setNote(ok?'ok':'fail');});
+    });
+    window.onLang=function(){relabel();office();setNote(noteState);};
+  }
+  var last='y';
+  if($('emi-u'))$('emi-u').addEventListener('change',function(){var u=this.value,v=parseFloat($('emi-y').value);if(!isNaN(v)&&u!==last){$('emi-y').value=u==='m'?Math.round(v*12):+(v/12).toFixed(2);}last=u;});
+  var C={emi:emi,sip:sip,fd:fd,gst:gst,bmi:bmi,age:age,cal:cal,time:time,office:office};
+  [['emi',['emi-p','emi-r','emi-y','emi-u']],['sip',['s-p','s-r','s-y','s-u']],['fd',['f-p','f-r','f-y','f-u','f-c']],['gst',['gst-a','gst-r','gst-m']],['bmi',['bmi-h','bmi-w']],['age',['age-d']],
+   ['cal',['c-a','c-s','c-h','c-w','c-act','c-g']],['time',['tm-s','tm-e','a-h','a-m','a-s','op','b-h','b-m','b-s']],['office',OID]].forEach(function(p){
+    p[1].forEach(function(i){var el=$(i);if(el){el.addEventListener('input',C[p[0]]);el.addEventListener('change',C[p[0]]);}});});
+  C[window.START||'emi']();
+  if(window.i18nInit)window.i18nInit();
+})();
+</script>
+</body>
+</html>
